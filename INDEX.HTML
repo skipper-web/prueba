@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Slytherin - Harry Potter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Feliz dia a mi reina Slytherin, vamos a ver que tanto sabe mi reina de su casa</h1>
+        <h2>Bienvenido al Quiz de Slytherin</h2>
+        <p>Pon a prueba tus conocimientos sobre la casa más astuta de Hogwarts</p>
+    </header>
+    <main>
+        <!-- Pantalla de selección de nivel -->
+        <section id="level-selection">
+            <h2>Selecciona un nivel</h2>
+            <div id="level-buttons">
+                <button onclick="startQuiz(1)">Sangre Sucia 🐍</button>
+                <button onclick="startQuiz(2)">Familia Noble 🐍</button>
+                <button onclick="startQuiz(3)">Mago Tenebroso 🐍</button>
+                <button onclick="startQuiz(4)">El que no debe ser nombrado🐍</button>
+            </div>
+        </section>
+
+        <!-- Contenedor del quiz -->
+        <section id="quiz-container" class="hidden">
+            <div id="question-image"></div>
+            <h2 id="question"></h2>
+            <p id="progress"></p>
+            <div id="answers"></div>
+            <div id="quiz-buttons">
+                <button id="next-btn">Siguiente 🐍</button>
+                <button onclick="returnToMenu()">Volver al menú 🏠</button>
+                <button onclick="showScores()">Ver puntuaciones 📊</button>
+            </div>
+        </section>
+
+        <!-- Contenedor de resultados -->
+        <section id="result" class="hidden">
+            <h2>Tu resultado</h2>
+            <p id="score"></p>
+            <div id="results-table"></div>
+            <button onclick="restartQuiz()">¿Reintentar? 🐍</button>
+            <button onclick="returnToMenu()">Volver al menú 🏠</button>
+        </section>
+
+        <!-- Contenedor de puntuaciones -->
+        <section id="scores-section" class="hidden">
+            <h2>Puntuaciones por nivel</h2>
+            <div id="scores-tables"></div>
+            <button onclick="returnToMenu()">Volver al menú 🏠</button>
+        </section>
+    </main>
+    <footer>
+        <p>Desde que llegaste a mi vida mi amor me hiceste volver a creer en la magia 🐍</p>
+    </footer>
+</body>
+</html>
